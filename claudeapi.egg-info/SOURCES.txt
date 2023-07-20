@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+claudeapi.egg-info/PKG-INFO
+claudeapi.egg-info/SOURCES.txt
+claudeapi.egg-info/dependency_links.txt
+claudeapi.egg-info/requires.txt
+claudeapi.egg-info/top_level.txt
