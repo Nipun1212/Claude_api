@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+Claude/__init__.py
+Claude/claude.py
+claude2.egg-info/PKG-INFO
+claude2.egg-info/SOURCES.txt
+claude2.egg-info/dependency_links.txt
+claude2.egg-info/requires.txt
+claude2.egg-info/top_level.txt

@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: claude2
+Version: 1.1.5
+Summary: A Python package provides an unofficial api for interacting with the Claude from Anthropic
+Home-page: https://github.com/Nipun1212/Claude_api
+Author: Nipun
+Author-email: nipunbhatia06@gmail.com
+License: MIT
+Keywords: claude,ai,claude-ai,API,requests,chatbot
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Claude AI-API ( Unofficial )
+
+This project provides an unofficial API for Claude AI from Anthropic, allowing users to access and interact with Claude AI and trying out experiments with the same.

@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
-Name: claudeapi
-Version: 0.1.0
+Name: claude2
+Version: 1.0.0
 Summary: A Python package provides an unofficial api for interacting with the Claude from Anthropic
 Home-page: https://github.com/Nipun1212/Claude_api
 Author: Nipun

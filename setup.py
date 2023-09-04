@@ -5,8 +5,8 @@ base_path = Path(__file__).parent
 long_description = (base_path / "README.md").read_text()
 
 setup(
-    name='claude_api', 
-    version='0.1.0',  
+    name='claude2', 
+    version='1.1.5',  
     author='Nipun',
     license="MIT",
     author_email='nipunbhatia06@gmail.com',
@@ -24,8 +24,12 @@ setup(
         'Programming Language :: Python :: 3.9',
     ],
     keywords=['claude', 'ai', 'claude-ai', 'API', 'requests', 'chatbot'],
+    package_dir={
+    "": "Claude"
+    },
+    py_modules=["claude"],
     install_requires=[
-        'requests',  # List any dependencies your package needs
+        'requests', 'curl_cffi' # List any dependencies your package needs
     ],
     python_requires=">=3.7",
 )

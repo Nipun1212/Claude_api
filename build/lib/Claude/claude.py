@@ -1,4 +1,4 @@
-from curl_cffi import requests
+import requests
 import json
 import os
 import uuid
@@ -22,19 +22,16 @@ class Claude:
         url = 'https://claude.ai/api/organizations'
 
         headers = {
-            'User-Agent':
-            'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0',
-            'Accept-Language': 'en-US,en;q=0.5',
-            'Referer': 'https://claude.ai/chats',
+            'Accept': '*/*',
+            'Accept-Encoding': 'gzip, deflate, br',
+            'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8',
             'Content-Type': 'application/json',
-            'Sec-Fetch-Dest': 'empty',
-            'Sec-Fetch-Mode': 'cors',
-            'Sec-Fetch-Site': 'same-origin',
-            'Connection': 'keep-alive',
-            'Cookie': f'{self.cookies}'
+            'Cookie': f'{self.cookies}',
+            'Referer': 'https://claude.ai/chat/3327f77b-fc2f-4ff3-bf28-2f5ca7e4e84c',
+            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
         }
 
-        response = requests.get(url, headers=headers,impersonate="chrome110")
+        response = requests.get(url, headers=headers)
 
         if response.status_code == 200:
             data = response.json()
@@ -62,19 +59,16 @@ class Claude:
         url = f'https://claude.ai/api/organizations/{self.organisation_uuid}/chat_conversations'
 
         headers = {
-            'User-Agent':
-            'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0',
-            'Accept-Language': 'en-US,en;q=0.5',
-            'Referer': 'https://claude.ai/chats',
+            'Accept': '*/*',
+            'Accept-Encoding': 'gzip, deflate, br',
+            'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8',
             'Content-Type': 'application/json',
-            'Sec-Fetch-Dest': 'empty',
-            'Sec-Fetch-Mode': 'cors',
-            'Sec-Fetch-Site': 'same-origin',
-            'Connection': 'keep-alive',
-            'Cookie': f'{self.cookies}'
+            'Cookie': f'{self.cookies}',
+            'Referer': 'https://claude.ai/chat/3327f77b-fc2f-4ff3-bf28-2f5ca7e4e84c',
+            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
         }
 
-        response = requests.get(url, headers=headers,impersonate="chrome110")
+        response = requests.get(url, headers=headers)
 
         if response.status_code == 200:
             conversation_history = response.json()
@@ -109,25 +103,18 @@ class Claude:
         conversation_uuid = self.get_random_uuid()
 
         headers = {
-            'User-Agent':
-            'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0',
-            'Accept-Language': 'en-US,en;q=0.5',
-            'Referer': 'https://claude.ai/chats',
+            'Accept': '*/*',
+            'Accept-Encoding': 'gzip, deflate, br',
+            'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8',
             'Content-Type': 'application/json',
-            'Origin': 'https://claude.ai',
-            'DNT': '1',
-            'Connection': 'keep-alive',
             'Cookie': f'{self.cookies}',
-            'Sec-Fetch-Dest': 'empty',
-            'Sec-Fetch-Mode': 'cors',
-            'Sec-Fetch-Site': 'same-origin',
-            'TE': 'trailers'
+            'Referer': 'https://claude.ai/chat/3327f77b-fc2f-4ff3-bf28-2f5ca7e4e84c',
+            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
         }
-
 
         payload= json.dumps({"uuid": conversation_uuid, "name": ""})
 
-        response = requests.post(url,data=payload, headers=headers,impersonate="chrome110")
+        response = requests.post(url,data=payload, headers=headers)
 
         if response.status_code == 201:
             data=response.json()
@@ -153,28 +140,21 @@ class Claude:
                     'model': "claude-2",
                     'prompt': f'{prompt}',
                     'timezone': "Asia/Singapore"},
-                    "organization_uuid": f"{self.organisation_uuid}",
-                    "conversation_uuid": f"{self.conversation_uuid}",
+                    'conversation_uuid': "755dc0ba-14ca-4804-8315-13c01729096c",
+                    'organization_uuid': "4c807c28-09f4-4304-acbe-ac5554c59973",
                     'text': f'{prompt}'})
         
         headers = {
-            'User-Agent':
-            'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0',
-            'Accept': 'text/event-stream, text/event-stream',
-            'Accept-Language': 'en-US,en;q=0.5',
-            'Referer': 'https://claude.ai/chats',
+            'Accept': '*/*',
+            'Accept-Encoding': 'gzip, deflate, br',
+            'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8',
             'Content-Type': 'application/json',
-            'Origin': 'https://claude.ai',
-            'DNT': '1',
-            'Connection': 'keep-alive',
             'Cookie': f'{self.cookies}',
-            'Sec-Fetch-Dest': 'empty',
-            'Sec-Fetch-Mode': 'cors',
-            'Sec-Fetch-Site': 'same-origin',
-            'TE': 'trailers'
+            'Referer': 'https://claude.ai/chat/3327f77b-fc2f-4ff3-bf28-2f5ca7e4e84c',
+            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
         }
 
-        response = requests.post(url, headers=headers, data=payload,impersonate="chrome110")
+        response = requests.post(url, headers=headers, data=payload)
 
         lines = response.text.split('\n')
 
