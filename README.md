@@ -74,6 +74,18 @@ print(response)
 ```
 
 
+## Disclaimer
+
+This project provides an unofficial API for Claude AI and is not affiliated with or endorsed by Claude AI or Anthropic. Use it at your own risk.
+The package was created to support developers in testing functionalities due to delays in the official Claude API package. However, it should not be misused or abused. Please be cautious and refer to the Readme for more information.
+  
+<br><br>
+  
+*Copyright (c) 2023  Nipun Bhatia*<br>
+
+
+Please refer to the official Claude AI documentation[https://claude.ai/docs] for more information on how to use Claude AI.
+        
 
 
 
